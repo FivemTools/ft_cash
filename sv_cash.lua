@@ -18,9 +18,7 @@ function AddCash(emitter, mount)
 
     mount = mount + 0.0
     local cash = data.cash
-    print("cash : " .. cash)
     cash = cash + mount
-    print("cash : " .. cash)
     TriggerEvent("ft_gamemode:SvSetPlayerData", emitter, { cash = cash })
 
   end)
