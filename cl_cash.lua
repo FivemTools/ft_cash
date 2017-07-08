@@ -4,11 +4,7 @@
 -- @License: GNU General Public License v3.0
 
 function GetCash()
-  Citizen.CreateThread(function()
-
-    return exports.ft_gamemode:GetPlayerData("cash")
-
-  end)
+   return exports.ft_gamemode:GetPlayerData("cash")
 end
 
 RegisterNetEvent("ft_cash:ClGetCash")
