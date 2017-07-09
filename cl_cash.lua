@@ -1,6 +1,6 @@
 -- @Date:   2017-07-01T12:38:38+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-07-06T19:18:17+02:00
+-- @Last modified time: 2017-07-09T19:29:03+02:00
 -- @License: GNU General Public License v3.0
 
 function GetCash()
@@ -9,10 +9,14 @@ end
 
 RegisterNetEvent("ft_cash:ClGetCash")
 AddEventHandler("ft_cash:ClGetCash", function(callback)
-  Citizen.CreateThread(function()
+  local cash = GetCash()
+  callback(cash)
+end)
 
-    local cash = GetCash()
-    callback(cash)
-
-  end)
+-- Dead Event
+RegisterNetEvent("baseevents:onPlayerDied")
+AddEventHandler("baseevents:onPlayerDied", function(callback)
+  if Config.removeOnDead then
+    
+  end
 end)
