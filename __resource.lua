@@ -11,10 +11,16 @@ dependencies {
 }
 
 client_scripts {
+  -- Requirement
+  "@ft_players/client.wrappers.lua",
+
   "src/cash.client.lua",
 }
 
 server_scripts {
+  -- Requirement
+  "@ft_players/server.wrappers.lua",
+
   "settings.client.lua",
   "src/cash.server.lua",
 }

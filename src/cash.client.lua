@@ -6,5 +6,5 @@
 --
 
 function GetCash()
-  return exports.ft_players:GetPlayer("cash")
+  return GetPlayer("cash")
 end
