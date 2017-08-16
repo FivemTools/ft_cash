@@ -5,6 +5,6 @@
 -- @Source: https://github.com/FivemTools/ft_cash
 --
 
-function GetCash()
+function GetPlayerCash()
   return GetPlayer("cash")
 end
