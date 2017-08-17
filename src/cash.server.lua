@@ -6,78 +6,7 @@
 --
 
 --
--- Events
---
-
--- RegisterServerEvent('ft_cash:GetCash')
--- AddEventHandler('ft_cash:GetCash', function(callback)
---
---   local source = source
---   if source == -1 then
---     CancelEvent()
---   end
---
---   local player = GetPlayerFormSource(source)
---   local mount = player:GetCash()
---
---   callback(mount)
---
--- end)
---
--- RegisterServerEvent('ft_cash:SetCash')
--- AddEventHandler('ft_cash:SvSetCash', function(mount)
---
---   local source = source
---   if source == -1 then
---     CancelEvent()
---   end
---
---   local player = GetPlayerFormSource(source)
---   player:SetCash(mount)
--- end)
---
--- RegisterServerEvent('ft_cash:AddCash')
--- AddEventHandler('ft_cash:SvAddCash', function(mount)
---
---   local source = source
---   if source == -1 then
---     CancelEvent()
---   end
---
---   local player = GetPlayerFormSource(source)
---   player:AddCash(mount)
---
--- end)
---
--- RegisterServerEvent('ft_cash:RemoveCash')
--- AddEventHandler('ft_cash:SvRemoveCash', function(mount)
---
---   local source = source
---   if source == -1 then
---     CancelEvent()
---   end
---
---   local player = GetPlayerFormSource(source)
---   player:RemoveCash(mount)
---
--- end)
---
--- RegisterServerEvent('ft_cash:GiveCash')
--- AddEventHandler('ft_cash:SvGiveCash', function(emitter, receiver, mount)
---   GiveCash(emitter, receiver, mount)
--- end)
-
--- Dead Event
-RegisterServerEvent("baseevents:onPlayerDied")
-AddEventHandler("baseevents:onPlayerDied", function()
-  if Settings.removeOnDead then
-    local player = GetPlayerFormSource(source)
-    player:SetCash(0)
-  end
-end)
-
---
--- Function
+-- Functions
 --
 
 AddEventHandler('ft_players:onResourceReady', function ()
@@ -94,13 +23,13 @@ AddEventHandler('ft_players:onResourceReady', function ()
 
   -- Add cash
   AddPlayerMethod('AddCash', function(mount)
-    local cash = self.cash + mount + 0.0
+    local cash = self.cash + mount
     self:SetCash(emitter, cash)
   end)
 
   -- Remove cash
   AddPlayerMethod('RemoveCash', function(mount)
-    local cash = self.cash - mount + 0.0
+    local cash = self.cash - mount
     self:SetCash(emitter, cash)
   end)
 
