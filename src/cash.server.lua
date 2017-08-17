@@ -83,29 +83,29 @@ end)
 AddEventHandler('ft_players:onResourceReady', function ()
 
   -- Get cash
-  PlayerAddMethod('GetCash', function()
+  AddPlayerMethod('GetCash', function()
     return self.cash + 0.0
   end)
 
   -- Set cash
-  PlayerAddMethod('SetCash', function(mount)
+  AddPlayerMethod('SetCash', function(mount)
     self.cash = mount + 0.0
   end)
 
   -- Add cash
-  PlayerAddMethod('AddCash', function(mount)
+  AddPlayerMethod('AddCash', function(mount)
     local cash = self.cash + mount + 0.0
     self:SetCash(emitter, cash)
   end)
 
   -- Remove cash
-  PlayerAddMethod('RemoveCash', function(mount)
+  AddPlayerMethod('RemoveCash', function(mount)
     local cash = self.cash - mount + 0.0
     self:SetCash(emitter, cash)
   end)
 
   -- Give cash
-  PlayerAddMethod('GiveCash', function(player, mount)
+  AddPlayerMethod('GiveCash', function(player, mount)
     self:RemoveCash(mount)
     -- self:Save()
     player:AddCash(mount)
