@@ -5,6 +5,4 @@
 -- @Source: https://github.com/FivemTools/ft_cash
 --
 
-Settings = {
-  removeOnDead = false, -- Remove cash on dead player
-}
+Settings = {}
