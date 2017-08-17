@@ -7,7 +7,6 @@
 
 dependencies {
   "ft_players",
-  "baseevents",
 }
 
 client_scripts {
@@ -21,12 +20,11 @@ server_scripts {
   -- Requirement
   "@ft_players/server.wrappers.lua",
 
-  "settings.client.lua",
   "src/cash.server.lua",
 }
 
 exports {
-
+  "GetPlayerCash",
 }
 
 server_exports {
