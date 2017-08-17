@@ -9,6 +9,7 @@
 -- Functions
 --
 
+-- Add function to player
 AddEventHandler('ft_players:onResourceReady', function ()
 
   -- Get cash
@@ -24,13 +25,13 @@ AddEventHandler('ft_players:onResourceReady', function ()
   -- Add cash
   AddPlayerMethod('AddCash', function(mount)
     local cash = self.cash + mount
-    self:SetCash(emitter, cash)
+    self:SetCash(cash)
   end)
 
   -- Remove cash
   AddPlayerMethod('RemoveCash', function(mount)
     local cash = self.cash - mount
-    self:SetCash(emitter, cash)
+    self:SetCash(cash)
   end)
 
   -- Give cash
