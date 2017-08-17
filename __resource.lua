@@ -19,6 +19,7 @@ client_scripts {
 server_scripts {
   -- Requirement
   "@ft_players/server.wrappers.lua",
+  "@ft_utils/utils.lua", -- Utils
 
   "src/cash.server.lua",
 }
