@@ -22,6 +22,7 @@ server_scripts {
   "@ft_utils/utils.lua", -- Utils
 
   "src/cash.server.lua",
+  "src/init.server.lua",
 }
 
 exports {
