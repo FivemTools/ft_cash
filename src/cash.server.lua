@@ -6,5 +6,5 @@
 --
 
 --
--- Function
+-- Functions
 --
