@@ -9,11 +9,44 @@
 AddEventHandler('onServerResourceStart', function (resource)
   if resource == "ft_cash" then
 
-    -- Convar
-    Settings.removeOnDead = GetConvar("ft_cash_removeOnDead", Settings.removeOnDead) == "true" and true or false
-
     -- Send event
     TriggerEvent('ft_cash:onResourceReady')
 
   end
+end)
+
+-- Add method in Player
+RegisterServerEvent("ft_players:onResourceReady")
+AddEventHandler('ft_players:onResourceReady', function ()
+
+  -- Get cash
+  PlayerAddMethod('GetCash', function()
+    return self.cash + 0.0
+  end)
+
+  -- Set cash
+  PlayerAddMethod('SetCash', function(mount)
+    self.cash = mount + 0.0
+  end)
+
+  -- Add cash
+  PlayerAddMethod('AddCash', function(mount)
+    local cash = self.cash + mount + 0.0
+    self:SetCash(emitter, cash)
+  end)
+
+  -- Remove cash
+  PlayerAddMethod('RemoveCash', function(mount)
+    local cash = self.cash - mount + 0.0
+    self:SetCash(emitter, cash)
+  end)
+
+  -- Give cash
+  PlayerAddMethod('GiveCash', function(player, mount)
+    self:RemoveCash(mount)
+    -- self:Save()
+    player:AddCash(mount)
+    -- player:Save()
+  end)
+
 end)
