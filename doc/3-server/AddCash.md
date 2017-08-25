@@ -1,7 +1,10 @@
-#
+# AddCash
+player:AddCash(mount)
 
-##Description
+## Description
 
-##Export
+## Exemples
 
-##Wrappers
+```lua
+player:AddCash(50)
+```

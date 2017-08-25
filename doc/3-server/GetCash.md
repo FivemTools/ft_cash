@@ -1,7 +1,10 @@
-#
+# GetCash
+player:GetCash()
 
-##Description
+## Description
 
-##Export
+## Exemples
 
-##Wrappers
+```lua
+player:GetCash()
+```

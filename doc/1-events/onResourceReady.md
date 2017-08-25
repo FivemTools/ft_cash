@@ -1,7 +1,13 @@
-#onResourceReady
+# onResourceReady
 
-##Description
+## Description
 
-##Export
+Allow you to do something when the ressource is ready.
 
-##Wrappers
+## Exemple
+
+```lua
+AddEventHandler('ft_cash:OnResourceReady', function ()
+  -- Your code
+end)
+```

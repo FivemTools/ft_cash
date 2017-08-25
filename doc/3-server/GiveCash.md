@@ -1,7 +1,10 @@
-#
+# GiveCash
+player:GiveCash(Player, mount)
 
-##Description
+## Description
 
-##Export
+## Exemples
 
-##Wrappers
+```lua
+player:GiveCash(oldPlayer, 50)
+```
