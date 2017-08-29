@@ -10,15 +10,10 @@ dependencies {
 }
 
 client_scripts {
-  -- Requirement
-  "@ft_players/src/client.wrappers.lua",
-
   "src/cash.client.lua",
 }
 
 server_scripts {
-  -- Requirement
-  "@ft_players/src/server.wrappers.lua",
   "@ft_utils/src/utils.lua", -- Utils
 
   "src/cash.server.lua",

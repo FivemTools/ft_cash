@@ -11,5 +11,5 @@
 
 -- Get player cash
 function GetPlayerCash()
-  return GetPlayer("cash")
+  return exports.ft_players:GetPlayer("cash")
 end
