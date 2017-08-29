@@ -6,5 +6,5 @@ GetPlayerCash()
 ## Exemples
 
 ```lua
-GetPlayerCash()
+exports.ft_players:GetPlayerCash()
 ```
